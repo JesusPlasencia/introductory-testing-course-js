@@ -22,7 +22,6 @@ describe('Test for BooksService', () => {
       mockGetAll.mockResolvedValue(fakeBooks);
       // Act
       const books = await service.getBooks({});
-      console.log(books);
       // Asset
       expect(books.length).toEqual(2);
       expect(mockGetAll).toHaveBeenCalled();
@@ -36,7 +35,6 @@ describe('Test for BooksService', () => {
       mockGetAll.mockResolvedValue(fakeBooks);
       // Act
       const books = await service.getBooks({});
-      console.log(books);
       // Asset
       expect(books[0].name).toEqual(fakeBooks[0].name);
     });
